@@ -1,11 +1,3 @@
-// TODO Implement this library.
-
-//Esta sera a tela de login
-//Nela tera um campo superior dizendo "Entre" Com um campo para email e senha
-// Checkbox com "Lembrar" e Campo Esqueceu a senha
-//Botao de entrar
-// Nao tem senha? criar
-
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tela de Login',
+      title: 'Login',
       home: LoginPage(),
     );
   }
@@ -68,18 +60,17 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Lógica para fazer login
-                // Aqui você pode validar os campos de entrada, fazer chamadas para autenticação, etc.
+                Navigator.pushNamed(context, 't6');
               },
               child: Text('Login'),
             ),
             SizedBox(height: 10.0),
             GestureDetector(
               onTap: () {
-                // Lógica para navegar para a tela de registro
+                Navigator.pushNamed(context, 't2');
               },
               child: Text(
-                'Não tem uma conta? Crie uma',
+                'Não tem uma conta? Criar',
                 style: TextStyle(
                   color: Colors.blue,
                   decoration: TextDecoration.underline,
@@ -89,10 +80,10 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 10.0),
             GestureDetector(
               onTap: () {
-                // Lógica para lembrar a senha
+                Navigator.pushNamed(context, 't5');
               },
               child: Text(
-                'Esqueceu sua senha? Lembrar',
+                'Esqueceu sua senha? Recuperar',
                 style: TextStyle(
                   color: Colors.blue,
                   decoration: TextDecoration.underline,

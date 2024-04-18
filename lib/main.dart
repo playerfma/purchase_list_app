@@ -1,12 +1,12 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-
-import 'view/principal_view.dart';
-import 'view/tela1.dart';
-import 'register_view.dart';
-import 'view/inicio.dart';
-import 'view/login_view.dart';
-import 'view/register_view.dart';
+import 'package:purchase_list_app/view/PrincipalView.dart';
+import 'view/HomePage.dart';
+import 'view/LoginPage.dart';
+import 'view/RegisterPage.dart';
+import 'view/ShoppingCartPage.dart';
+import 'view/AboutPage.dart';
+import 'package:purchase_list_app/view/PasswordRecoveryPage.dart';
 
 void main() {
   runApp(
@@ -28,12 +28,18 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: RegisterPage(), //Inserir tela de inicio
+      home: HomePage(),
 
       //Navigation routes
-      initialRoute: 't0', //Verificar se e necessario inserir tela inicil
+      initialRoute: 't0',
       routes: {
-        't0': (context) => RegisterPage(),
+        't0': (context) => HomePage(),
+        't1': (context) => LoginPage(),
+        't2': (context) => RegisterPage(),
+        't3': (context) => ShoppingCartPage(),
+        't4': (context) => AboutPage(),
+        't5': (context) => PasswordRecoveryPage(),
+        't6': (context) => PrincipalView(),
 
         //inserir rotas
       },

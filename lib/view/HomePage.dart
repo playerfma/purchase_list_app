@@ -1,5 +1,4 @@
 import 'package:device_preview/device_preview.dart';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tela Inicial'),
+        title: Text('Purchasing list APP'),
       ),
       body: Center(
         child: Column(
@@ -42,18 +41,16 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Lógica para ação do botão "Entrar"
-                // Aqui você pode navegar para outra tela ou fazer outra ação desejada
+                Navigator.pushNamed(context, 't1');
               },
               child: Text('Entrar'),
             ),
             SizedBox(height: 10.0),
             TextButton(
               onPressed: () {
-                // Lógica para ação do botão "Se cadastrar"
-                // Aqui você pode navegar para outra tela ou fazer outra ação desejada
+                Navigator.pushNamed(context, 't2');
               },
-              child: Text('Se cadastrar'),
+              child: Text('Criar conta'),
             ),
           ],
         ),

@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cadastro',
+      title: 'Nova conta',
       home: RegisterPage(),
     );
   }
@@ -29,7 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cadastro'),
+        title: Text('Nova conta'),
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
@@ -72,14 +72,14 @@ class _RegisterPageState extends State<RegisterPage> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Lógica para criar a conta
+                Navigator.pushNamed(context, 't1');
               },
               child: Text('Cadastrar'),
             ),
             SizedBox(height: 10.0),
             GestureDetector(
               onTap: () {
-                // Lógica para navegar de volta para a tela de login
+                Navigator.pushNamed(context, 't1');
               },
               child: Text(
                 'Já tem uma conta? Entrar',
